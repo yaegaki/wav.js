@@ -161,7 +161,7 @@ var wav = (function(){
 	*/
 	function addWav(pos, targetWav){
 		var fmt = this.chunks['fmt '];
-		var targetFmt = targetWav.chunks['fmt'];
+		var targetFmt = targetWav.chunks['fmt '];
 		var flag = fmt.channels === targetFmt && fmt.channels === 2;
 		var offset = Math.floor((pos/1000) * fmt.channels * fmt.samplingRate) & 0xfffffffe;
 
